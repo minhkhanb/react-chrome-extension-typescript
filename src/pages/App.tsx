@@ -1,5 +1,9 @@
 import React from 'react';
-import { DOMMessage, DOMMessageResponse } from './types';
+import { DOMMessage, DOMMessageResponse } from '../utils/types';
+import { Router, Link } from '@reach/router';
+
+let Home = () => <div>Home</div>
+let Dash = () => <div>Dash</div>
 
 function App() {
   const [title, setTitle] = React.useState('');
@@ -33,9 +37,17 @@ function App() {
 
   return (
     <div className="App">
-      <h1>SEO Extension</h1>
+      <h1 className="my-4">SEO Extension</h1>
 
-      <h3 className="test flex bg-green-200">Test <span className="test--a">Test 33b</span></h3>
+      <nav>
+        <Link to="/">Home</Link> |{" "}
+        <Link to="dashboard">Dashboard</Link>
+      </nav>
+
+      <Router>
+        <Home path="/" />
+        <Dash path="dashboard" />
+      </Router>
 
       <ul className="SEOForm">
         <li className="SEOValidation">

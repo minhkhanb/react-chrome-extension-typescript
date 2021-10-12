@@ -1,4 +1,4 @@
-import { DOMMessage, DOMMessageResponse } from '../types';
+import { DOMMessage, DOMMessageResponse } from '../utils/types';
 
 const messagesFromReactAppListener = (msg: DOMMessage, sender: chrome.runtime.MessageSender, sendResponse: (response: DOMMessageResponse) => void) => {
   console.log('[content.js]. Message received', msg);
