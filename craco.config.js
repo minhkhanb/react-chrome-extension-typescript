@@ -1,12 +1,11 @@
 module.exports = {
   webpack: {
     configure: (webpackConfig, {env, paths}) => {
-      return {
+      const newConfig = {
         ...webpackConfig,
         entry: {
           main: [env === 'development' &&
-          require.resolve('react-dev-utils/webpackHotDevClient'),paths.appIndexJs].filter(Boolean),
-          content: './src/chromeServices/DOMEvaluator.ts',
+            require.resolve('react-dev-utils/webpackHotDevClient'),paths.appIndexJs].filter(Boolean),
         },
         output: {
           ...webpackConfig.output,
@@ -17,6 +16,26 @@ module.exports = {
           runtimeChunk: false,
         }
       }
+
+      if (env === 'production') {
+        return {
+          ...newConfig,
+          entry: {
+            ...newConfig.entry,
+            content: './src/chromeServices/DOMEvaluator.ts',
+          }
+        }
+      }
+
+      return newConfig;
     },
-  }
+  },
+  style: {
+    postcss: {
+      plugins: [
+        require('tailwindcss')('./tailwind.config.js'),
+        require('autoprefixer'),
+      ],
+    },
+  },
 }

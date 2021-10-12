@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { DOMMessage, DOMMessageResponse } from './types';
 
 function App() {
@@ -35,6 +34,8 @@ function App() {
   return (
     <div className="App">
       <h1>SEO Extension</h1>
+
+      <h3 className="test flex bg-green-200">Test <span className="test--a">Test 33b</span></h3>
 
       <ul className="SEOForm">
         <li className="SEOValidation">

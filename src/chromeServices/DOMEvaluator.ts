@@ -16,4 +16,6 @@ const messagesFromReactAppListener = (msg: DOMMessage, sender: chrome.runtime.Me
 /**
  * Fired when a message is sent from either an extension process or a content script.
  */
+
+console.log('chrome: ', chrome.runtime);
 chrome.runtime.onMessage.addListener(messagesFromReactAppListener);
