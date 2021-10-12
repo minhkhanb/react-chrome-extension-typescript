@@ -1,9 +1,7 @@
 import React from 'react';
 import { DOMMessage, DOMMessageResponse } from '../utils/types';
-import { Router, Link } from '@reach/router';
-
-let Home = () => <div>Home</div>
-let Dash = () => <div>Dash</div>
+import { Link } from '@reach/router';
+import MainRouter from '../router';
 
 function App() {
   const [title, setTitle] = React.useState('');
@@ -41,13 +39,10 @@ function App() {
 
       <nav>
         <Link to="/">Home</Link> |{" "}
-        <Link to="dashboard">Dashboard</Link>
+        <Link to="profile">Profile</Link>
       </nav>
 
-      <Router>
-        <Home path="/" />
-        <Dash path="dashboard" />
-      </Router>
+      <MainRouter />
 
       <ul className="SEOForm">
         <li className="SEOValidation">
