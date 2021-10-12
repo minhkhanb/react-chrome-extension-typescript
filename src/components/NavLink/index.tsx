@@ -6,11 +6,10 @@ export interface NavLinkProps {
   to: string;
   className?: string;
   children?: any;
-  onClick?: (e: any) => void;
 }
 
 const NavLink: React.FunctionComponent<NavLinkProps> = styled(
-  ({ to, className, onClick, children, ...props }) => {
+  ({ to, className, children }) => {
     return (
       <Match path={to}>
         {(props) => (

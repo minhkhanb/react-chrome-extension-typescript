@@ -13,7 +13,12 @@ module.exports = {
     'prettier/prettier': ['error', { singleQuote: true }],
     'no-unused-vars': [
       'error',
-      { vars: 'all', args: 'after-used', ignoreRestSiblings: false },
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: false,
+        argsIgnorePattern: '^_',
+      },
     ],
   },
   overrides: [
@@ -29,6 +34,12 @@ module.exports = {
       rules: {
         '@typescript-eslint/explicit-module-boundary-types': ['error'],
       },
+      excludedFiles: [
+        './src/pages/**/*',
+        './src/react-app-env.d.ts',
+        './src/chromeServices/**/*',
+        './src/reportWebVitals.ts',
+      ],
     },
   ],
 };

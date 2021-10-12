@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Location } from '@reach/router';
+import { Location } from '@reach/router';
 import { HomeIcon, UserIcon } from '@heroicons/react/solid';
 import NavLink from '../NavLink';
 
