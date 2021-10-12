@@ -21,15 +21,10 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
               <span className="block w-1/2 h-1 bg-white ml-auto" />
             </button>
           </div>
-
-          <nav>
-            <Link to="/">Home</Link> |{" "}
-            <Link to="profile">Profile</Link>
-          </nav>
         </div>
       </header>
 
-      <main className="h-96">
+      <main className="h-96 bg-white drop-shadow-sm">
         {children}
       </main>
 

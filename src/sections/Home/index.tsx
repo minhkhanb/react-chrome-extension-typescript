@@ -35,7 +35,7 @@ const Home: React.FunctionComponent<HomeProps> = () => {
 
   return (
     <div>
-      <ul className="SEOForm">
+      <ul className="shadow-main p-4">
         <li className="SEOValidation">
           <div className="SEOValidationField">
             <span className="SEOValidationFieldTitle">Title</span>
