@@ -21,7 +21,8 @@
     "typescript": "^4.3.5",
     "web-vitals": "^1.1.2",
     "@emotion/core": "^10.0.35",
-    "@emotion/styled": "^10.0.27"
+    "@emotion/styled": "^10.0.27",
+    "twin.macro": "^1.10.0"
   },
   "scripts": {
     "start": "craco start",
