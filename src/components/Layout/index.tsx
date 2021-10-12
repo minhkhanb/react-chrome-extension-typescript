@@ -24,27 +24,19 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
         </div>
       </header>
 
-      <main className="h-96 bg-white drop-shadow-sm">
-        {children}
-      </main>
+      <main className="h-96 bg-white drop-shadow-sm">{children}</main>
 
       <footer>
         <div className="footer">
           <ul className="flex bg-gray-400">
             <li>
-              <NavLink
-                to="/"
-                className="block p-4 text-yellow-600"
-              >
+              <NavLink to="/" className="block p-4 text-yellow-600">
                 <HomeIcon className="w-6 h-6" />
               </NavLink>
             </li>
 
             <li>
-              <NavLink
-                to="/profile"
-                className="block p-4 border-l text-pink-600"
-              >
+              <NavLink to="/profile" className="block p-4 border-l text-pink-600">
                 <UserIcon className="w-6 h-6" />
               </NavLink>
             </li>
@@ -52,7 +44,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({ children }) => {
         </div>
       </footer>
     </div>
-  )
-}
+  );
+};
 
 export default Layout;

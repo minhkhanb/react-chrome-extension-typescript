@@ -8,7 +8,7 @@ const ProfileScreen = ({ location }: any) => {
     <Layout location={location}>
       <Profile />
     </Layout>
-  )
-}
+  );
+};
 
 export default ProfileScreen;

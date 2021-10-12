@@ -1,7 +1,7 @@
-import React from "react";
-import HomeScreen from "./Home";
-import ProfileScreen from "./Profile";
-import { Router } from "@reach/router";
+import React from 'react';
+import HomeScreen from './Home';
+import ProfileScreen from './Profile';
+import { Router } from '@reach/router';
 
 function App() {
   return (

@@ -1,8 +1,8 @@
-import React from "react";
-import { DOMMessage, DOMMessageResponse } from "../../utils/types";
+import React from 'react';
+import { DOMMessage, DOMMessageResponse } from '../../utils/types';
 
 const Home: React.FunctionComponent = () => {
-  const [title, setTitle] = React.useState("");
+  const [title, setTitle] = React.useState('');
   const [headlines, setHeadlines] = React.useState<string[]>([]);
 
   React.useEffect(() => {
@@ -26,7 +26,7 @@ const Home: React.FunctionComponent = () => {
            */
           chrome.tabs.sendMessage(
             tabs[0].id || 0,
-            { type: "GET_DOM" } as DOMMessage,
+            { type: 'GET_DOM' } as DOMMessage,
             (response: DOMMessageResponse) => {
               setTitle(response.title);
               setHeadlines(response.headlines);
@@ -44,7 +44,7 @@ const Home: React.FunctionComponent = () => {
             <span className="SEOValidationFieldTitle">Title</span>
             <span
               className={`SEOValidationFieldStatus ${
-                title.length < 30 || title.length > 65 ? "Error" : "Ok"
+                title.length < 30 || title.length > 65 ? 'Error' : 'Ok'
               }`}
             >
               {title.length} Characters
@@ -58,7 +58,7 @@ const Home: React.FunctionComponent = () => {
             <span className="SEOValidationFieldTitle">Main Heading</span>
             <span
               className={`SEOValidationFieldStatus ${
-                headlines.length !== 1 ? "Error" : "Ok"
+                headlines.length !== 1 ? 'Error' : 'Ok'
               }`}
             >
               {headlines.length}

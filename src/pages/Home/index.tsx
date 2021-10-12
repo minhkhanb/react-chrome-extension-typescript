@@ -8,7 +8,7 @@ const HomeScreen = ({ location }: any) => {
     <Layout location={location}>
       <Home />
     </Layout>
-  )
-}
+  );
+};
 
 export default HomeScreen;
